@@ -6,7 +6,7 @@ A Interactive way of using animations on iOS with Lottie
 
 ### Tools
 
-For this app I used the following tools:
+This app is built with the following tools:
 
 * Xcode 9.2
 * [Lottie iOS Framework](https://github.com/airbnb/lottie-ios)
@@ -48,10 +48,10 @@ In this tutorial I downloaded an animation from [lottie files](https://www.lotti
 
 ```Swift
 private let animationView: LOTAnimationView = {
-        let view = LOTAnimationView(name: "lottieSample")
-        view.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
-        view.contentMode = .scaleAspectFit
-        return view
+    let view = LOTAnimationView(name: "lottieSample")
+    view.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+    view.contentMode = .scaleAspectFit
+    return view
 }()
 ```
 
@@ -61,10 +61,10 @@ Notice how the name of the animation is specified inside the `LOTAnimationView` 
 
 ```Swift
 func setupAnimationView() {
-        animationView.animationSpeed = 0.5
-        animationView.center = self.view.center
-        animationView.loopAnimation = true
-        view.addSubview(animationView)
+    animationView.animationSpeed = 0.5
+    animationView.center = self.view.center
+    animationView.loopAnimation = true
+    view.addSubview(animationView)
 }
 ```
 
@@ -85,7 +85,7 @@ func setupScrollView() {
         textLabel.textAlignment = .center
         textLabel.text = strings[i]
         scrollView.addSubview(textLabel)
-        }
+    }
 }
 ```
 
@@ -95,15 +95,15 @@ We create a label inside each `UIScrollView` page
 
 ```Swift
 func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let progress = scrollView.contentOffset.x / scrollView.contentSize.width
-        print(progress)
-        animationView.animationProgress = progress
+    let progress = scrollView.contentOffset.x / scrollView.contentSize.width
+    print(progress)
+    animationView.animationProgress = progress
 }
 ```
 
 ## Authors
 
-* This readme is created by **Adrian Silva** - [Web](https://adri4silva.github.io) but all the code is property of [Brian Advent](https://github.com/brianadvent)
+* This readme is created by [**Adrian Silva**](https://adri4silva.github.io) but all the code is property of [Brian Advent](https://github.com/brianadvent)
 
 ## Acknowledgments
 
